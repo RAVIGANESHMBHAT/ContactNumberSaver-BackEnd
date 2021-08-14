@@ -25,17 +25,17 @@ public class ContactController {
         return contactService.getAllContactNumbers();
     }
 
-    @PostMapping("/addContactNumber")
+    @PostMapping("/contactNumber")
     public String saveContact(@RequestBody ContactNumber contact) throws ExecutionException, InterruptedException {
         return contactService.saveContactNumber(contact);
     }
 
-    @PutMapping("/updateContactNumber")
+    @PutMapping("/contactNumber")
     public String updateContact(@RequestBody ContactNumber contact) throws ExecutionException, InterruptedException {
         return contactService.saveContactNumber(contact);
     }
 
-    @DeleteMapping("/deleteContactNumber/{name}")
+    @DeleteMapping("/contactNumber/{name}")
     public String deleteContact(@PathVariable String name) throws ExecutionException, InterruptedException {
         return contactService.deleteContactNumber(name);
     }
